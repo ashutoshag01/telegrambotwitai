@@ -53,7 +53,7 @@ def respond():
 
    return 'ok'
 
-@app.route('/set_webhook', methods=['GET', 'POST'])
+@app.route('/setwebhook', methods=['GET', 'POST'])
 def set_webhook():
    s = bot.setWebhook(URL)
    if s:
