@@ -1,13 +1,8 @@
 import re
 from flask import Flask, request
 import telegram
-#from telegram.passport.credentials import bot_token, bot_user_name, URL
+from telegram.passport.credentials import bot_token, bot_user_name,URL
 
-
-"""bot credentials"""
-bot_token="1174443046:AAH39jAknodjzwQkXVtsQtME0j0tY2ZuIx8"
-bot_user_name="Talkbuddy_bot"
-URL="talkbuddybot.herokuapp.com"
 
 global bot
 global TOKEN
@@ -55,7 +50,7 @@ def respond():
 
 @app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
-   s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
+   s = bot.setWebhook(URL)
    if s:
        return "webhook setup ok"
    else:
