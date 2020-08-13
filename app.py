@@ -1,7 +1,12 @@
 import re
 from flask import Flask, request
 import telegram
-from telegram.passport.credentials import bot_token, bot_user_name,URL
+#from telegram.passport.credentials import bot_token, bot_user_name,URL
+
+"""bot credentials"""
+bot_token="1174443046:AAH39jAknodjzwQkXVtsQtME0j0tY2ZuIx8"
+bot_user_name="Talkbuddy_bot"
+URL="talkbuddybot.herokuapp.com"
 
 
 global bot
