@@ -49,7 +49,7 @@ def main():
 
    #start the bot 
    updater.start_webhook(listen = "0.0.0.0",
-                         port = PORT,
+                         port = int(PORT),
                          url_path = TOKEN)
    updater.bot.set_webhook(URL+TOKEN)
    updater.idle()
