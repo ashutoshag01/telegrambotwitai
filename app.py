@@ -1,6 +1,8 @@
 import re
 from flask import Flask, request
 import telegram
+from telegram.ext import Updater, CommandHandler
+import logging
 #from telegram.passport.credentials import bot_token, bot_user_name,URL
 
 """bot credentials"""
@@ -12,10 +14,23 @@ URL="https://talkbuddybot.herokuapp.com"
 global bot
 global TOKEN
 TOKEN = bot_token
+
 bot = telegram.Bot(token=TOKEN)
+updater = Updater(token=TOKEN, use_context=True)
+dispatcher = updater.dispatcher
 
-app = Flask(__name__)
+logging.basicConfig(format='%(sctiem)s - %(name)s - %(levelname)s - %(message)s',
+                                level=logging.INFO)
 
+def start(update, context): context.bot.send_message(chat_id=update.effective_chat.id, text="I'm a bot, please talk to me!")
+start_handler = CommandHandler('start', start)
+dispatcher.add_handler(start_handler)
+
+updater.start_polling()
+
+#app = Flask(__name__)
+
+'''
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
    # retrieve the message in JSON and then transform it to Telegram object
@@ -68,3 +83,4 @@ def index():
 
 if __name__ == '__main__':
    app.run(threaded=True)
+'''
