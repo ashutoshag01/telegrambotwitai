@@ -6,7 +6,7 @@ import telegram
 """bot credentials"""
 bot_token="1174443046:AAH39jAknodjzwQkXVtsQtME0j0tY2ZuIx8"
 bot_user_name="Talkbuddy_bot"
-URL="talkbuddybot.herokuapp.com"
+URL="https://talkbuddybot.herokuapp.com"
 
 
 global bot
