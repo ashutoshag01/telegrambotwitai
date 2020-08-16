@@ -11,13 +11,13 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from wit import Wit
 
 """bot credentials"""
-TOKEN = "1174443046:AAH39jAknodjzwQkXVtsQtME0j0tY2ZuIx8"
-PORT = int(os.environ.get('PORT','8443'))
-BOT_USER_NAME = "Talkbuddy_bot"
-URL = "https://talkbuddybot.herokuapp.com/"
+TOKEN = "Your Credentials here"
+PORT = int(os.environ.get('PORT','give any port number'))
+BOT_USER_NAME = "name you gave"
+URL = "https://your_project_name.herokuapp.com/"
 
 """ai token"""
-AI_TOKEN = "BDAETOIRN7UQDCSTRKFAQXBMR45I3JY3"
+AI_TOKEN = "access token from wit ai"
    
 #Enable Logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
